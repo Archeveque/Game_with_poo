@@ -60,9 +60,10 @@ def game2(player1,player2)
   print ">"
   player_name = gets.chomp
   human = HumanPlayer.new(player_name)
-  battle_phase(player1,player2,human,bots)
+  battle_phase_player(player1,player2,human,bots)
 end
-def battle_phase(player1,player2,human,bots)
+
+def battle_phase_player(player1,player2,human,bots)
   while human.life_points >0 && (player1.life_points > 0 || player2.life_points >0)
     deco
     puts "Stats    PV: #{human.life_points}       Niv.arme: #{human.weapon_level}"
